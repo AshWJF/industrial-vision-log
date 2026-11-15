@@ -1,0 +1,14 @@
+# 统一 LF 行尾
+# 目的：Windows 侧 checkout 不被转成 CRLF，Ubuntu clone 后 .py / .sh 可直接运行
+* text=auto eol=lf
+
+# 明确声明文本类型，避免被误判为二进制
+*.py     text eol=lf
+*.sh     text eol=lf
+*.md     text eol=lf
+*.yaml   text eol=lf
+*.yml    text eol=lf
+*.xml    text eol=lf
+*.msg    text eol=lf
+*.srv    text eol=lf
+*.launch text eol=lf
