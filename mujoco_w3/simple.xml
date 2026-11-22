@@ -1,0 +1,16 @@
+<mujoco model="simple">
+  <option timestep="0.002"/>
+  <visual><headlight ambient="0.4 0.4 0.4" diffuse="0.7 0.7 0.7"/></visual>
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" width="64" height="64" rgb1="0.2 0.3 0.4" rgb2="0.1 0.15 0.2"/>
+    <material name="grid" texture="grid" texrepeat="4 4"/>
+  </asset>
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1"/>
+    <geom name="floor" type="plane" size="2 2 0.1" material="grid" friction="0.05"/>
+    <body name="box" pos="0 0 1" euler="0 20 0"><freejoint/>
+      <geom name="box_geom" type="box" size="0.1 0.1 0.1" rgba="0.2 0.4 1 1" mass="0.5" friction="0.05"/>
+    </body>
+    <camera name="cam" pos="0 -3 1.2" xyaxes="1 0 0 0 0.342 0.9397"/>
+  </worldbody>
+</mujoco>
